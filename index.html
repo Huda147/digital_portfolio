@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Alex Chen — Research Engineer & CS Graduate Student specializing in systems, ML, and robotics." />
+  <title>Alex Chen — Research Portfolio</title>
+
+  <!-- Fonts: Fraunces (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons (lightweight SVG icon set) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Home">AC</a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#about"   class="nav__link">About</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#research" class="nav__link">Research</a></li>
+        <li><a href="#skills"  class="nav__link">Skills</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <!-- Dark / Light toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="ph ph-sun"  id="iconSun"></i>
+          <i class="ph ph-moon" id="iconMoon"></i>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about"    class="nav__link">About</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#research" class="nav__link">Research</a></li>
+        <li><a href="#skills"   class="nav__link">Skills</a></li>
+        <li><a href="#contact"  class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Decorative background blobs -->
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Graduate Researcher · Systems & ML</p>
+      <h1 class="hero__name reveal">Alex Chen</h1>
+      <p class="hero__tagline reveal">
+        Building systems that <em>think</em>, robots that <em>explore</em>,<br />
+        and tools that <em>matter</em>.
+      </p>
+      <p class="hero__intro reveal">
+        CS PhD student at Stanford, advised by Prof. Jane Smith. My work sits at the intersection
+        of robotics, machine learning, and formal methods — with a focus on making autonomous
+        systems reliable in the real world.
+      </p>
+      <div class="hero__cta reveal">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">01 — About</span>
+        <h2 class="section__title">A bit about me</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            I'm a second-year PhD student in Computer Science at Stanford University. Before this,
+            I completed my B.Tech in Electronics &amp; Computer Engineering from IIT Bombay,
+            graduating with a Gold Medal.
+          </p>
+          <p>
+            I love working on hard problems where theory meets hardware — designing algorithms,
+            then watching them run on real robots or embedded systems. When I'm not in the lab,
+            you'll find me hiking, reading philosophy of mind, or cooking elaborate meals.
+          </p>
+          <div class="about__links">
+            <a href="./assets/cv.pdf" class="text-link" target="_blank" rel="noopener">
+              <i class="ph ph-file-text"></i> Download CV
+            </a>
+            <a href="https://scholar.google.com" class="text-link" target="_blank" rel="noopener">
+              <i class="ph ph-graduation-cap"></i> Google Scholar
+            </a>
+          </div>
+        </div>
+
+        <div class="about__cards reveal">
+          <div class="info-card">
+            <i class="ph ph-building-columns info-card__icon"></i>
+            <div>
+              <strong>Stanford University</strong>
+              <span>PhD, Computer Science · 2023–present</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="ph ph-graduation-cap info-card__icon"></i>
+            <div>
+              <strong>IIT Bombay</strong>
+              <span>B.Tech, EC Engineering · 2019–2023 · Gold Medal</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="ph ph-flask info-card__icon"></i>
+            <div>
+              <strong>Research Interests</strong>
+              <span>Robotics · ML Systems · Formal Verification · Edge AI</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="ph ph-map-pin info-card__icon"></i>
+            <div>
+              <strong>Location</strong>
+              <span>Stanford, CA — open to remote collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROJECTS  (cards injected by script.js from projects.json)
+  ============================================================ -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">02 — Projects</span>
+        <h2 class="section__title">Selected work</h2>
+      </div>
+
+      <div class="projects__grid" id="projectsGrid">
+        <!-- Cards are rendered dynamically -->
+        <div class="projects__loading" id="projectsLoading" aria-live="polite">
+          <span class="dot-pulse"></span>
+          <span>Loading projects…</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       RESEARCH TIMELINE
+  ============================================================ -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">03 — Research &amp; Experience</span>
+        <h2 class="section__title">Academic journey</h2>
+      </div>
+
+      <ol class="timeline" role="list">
+
+        <li class="timeline__item reveal">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <time class="timeline__date">2023 — present</time>
+            <h3 class="timeline__role">PhD Researcher — Autonomous Systems Lab</h3>
+            <p class="timeline__org">Stanford University · Stanford, CA</p>
+            <p class="timeline__desc">
+              Developing provably-safe motion planners for legged robots operating in unstructured
+              outdoor environments. Work combines barrier function theory with learned terrain models.
+            </p>
+            <ul class="timeline__pubs">
+              <li><a href="#" class="pub-link" target="_blank" rel="noopener">
+                <i class="ph ph-article"></i>
+                "Certified Safe Navigation via Neural Barrier Functions" — ICRA 2025 (submitted)
+              </a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <time class="timeline__date">Summer 2023</time>
+            <h3 class="timeline__role">Research Intern — Robotics Division</h3>
+            <p class="timeline__org">Google DeepMind · Mountain View, CA</p>
+            <p class="timeline__desc">
+              Worked on sim-to-real transfer for manipulation policies using domain-randomised
+              rendering. Reduced the sim-to-real gap by 35% on a benchmark grasping suite.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <time class="timeline__date">2022 — 2023</time>
+            <h3 class="timeline__role">Undergraduate Researcher</h3>
+            <p class="timeline__org">IIT Bombay · Systems &amp; Control Lab</p>
+            <p class="timeline__desc">
+              Bachelor's thesis on LiDAR-inertial odometry for GPS-denied environments. Implemented
+              a tightly-coupled EKF on resource-constrained embedded hardware.
+            </p>
+            <ul class="timeline__pubs">
+              <li><a href="#" class="pub-link" target="_blank" rel="noopener">
+                <i class="ph ph-article"></i>
+                "Lightweight LiDAR-IMU Fusion for UAV State Estimation" — IROS 2023
+              </a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <time class="timeline__date">Summer 2022</time>
+            <h3 class="timeline__role">Software Engineering Intern</h3>
+            <p class="timeline__org">Samsung R&amp;D Institute · Bangalore, India</p>
+            <p class="timeline__desc">
+              Optimised on-device inference for a face anti-spoofing model, achieving 3× speedup
+              through quantisation and operator fusion on the Exynos NPU.
+            </p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SKILLS
+  ============================================================ -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">04 — Skills</span>
+        <h2 class="section__title">Toolbox</h2>
+      </div>
+
+      <div class="skills__grid">
+
+        <div class="skills__group reveal">
+          <h3 class="skills__category">
+            <i class="ph ph-code"></i> Languages
+          </h3>
+          <div class="skills__badges">
+            <span class="badge">Python</span>
+            <span class="badge">C++</span>
+            <span class="badge">C</span>
+            <span class="badge">Haskell</span>
+            <span class="badge">Rust</span>
+            <span class="badge">MATLAB</span>
+            <span class="badge">Bash</span>
+          </div>
+        </div>
+
+        <div class="skills__group reveal">
+          <h3 class="skills__category">
+            <i class="ph ph-brain"></i> ML &amp; AI
+          </h3>
+          <div class="skills__badges">
+            <span class="badge">PyTorch</span>
+            <span class="badge">JAX</span>
+            <span class="badge">Hugging Face</span>
+            <span class="badge">CUDA</span>
+            <span class="badge">Scikit-learn</span>
+            <span class="badge">TensorRT</span>
+          </div>
+        </div>
+
+        <div class="skills__group reveal">
+          <h3 class="skills__category">
+            <i class="ph ph-robot"></i> Robotics &amp; Systems
+          </h3>
+          <div class="skills__badges">
+            <span class="badge">ROS2</span>
+            <span class="badge">Gazebo</span>
+            <span class="badge">MoveIt</span>
+            <span class="badge">PCL</span>
+            <span class="badge">OpenCV</span>
+            <span class="badge">LLVM</span>
+            <span class="badge">FreeRTOS</span>
+          </div>
+        </div>
+
+        <div class="skills__group reveal">
+          <h3 class="skills__category">
+            <i class="ph ph-wrench"></i> Tools &amp; Platforms
+          </h3>
+          <div class="skills__badges">
+            <span class="badge">Linux</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Git</span>
+            <span class="badge">CMake</span>
+            <span class="badge">AWS</span>
+            <span class="badge">LaTeX</span>
+            <span class="badge">Jupyter</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">05 — Contact</span>
+        <h2 class="section__title">Let's connect</h2>
+      </div>
+
+      <div class="contact__layout reveal">
+        <p class="contact__body">
+          I'm always open to research conversations, collaborations, internship offers,
+          or just a good discussion. Drop me a line — I reply within a few days.
+        </p>
+
+        <div class="contact__links">
+          <a href="mailto:alex@cs.stanford.edu" class="contact__item">
+            <span class="contact__icon"><i class="ph ph-envelope-simple"></i></span>
+            <div>
+              <strong>Email</strong>
+              <span>alex@cs.stanford.edu</span>
+            </div>
+          </a>
+          <a href="https://github.com/username" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon"><i class="ph ph-github-logo"></i></span>
+            <div>
+              <strong>GitHub</strong>
+              <span>github.com/username</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/username" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon"><i class="ph ph-linkedin-logo"></i></span>
+            <div>
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/username</span>
+            </div>
+          </a>
+          <a href="https://twitter.com/username" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon"><i class="ph ph-twitter-logo"></i></span>
+            <div>
+              <strong>Twitter / X</strong>
+              <span>@username</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Designed &amp; built by <strong>Alex Chen</strong> ·
+        <span id="footerYear"></span> ·
+        Open source on <a href="https://github.com/username/portfolio" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

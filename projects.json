@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Autonomous Terrain Mapper",
+    "description": "Developed a ROS-based autonomous robot system that generates high-fidelity 3D terrain maps using LiDAR sensor fusion and SLAM algorithms. Deployed on a custom rover platform.",
+    "technologies": ["Python", "ROS2", "C++", "PCL", "OpenCV"],
+    "github": "https://github.com/username/terrain-mapper",
+    "demo": "https://youtu.be/demo-link",
+    "featured": true
+  },
+  {
+    "title": "Neural Network Compression Study",
+    "description": "Researched and implemented structured pruning and knowledge distillation techniques to reduce model sizes by 70% with less than 2% accuracy drop on benchmark datasets.",
+    "technologies": ["PyTorch", "Python", "CUDA", "Jupyter"],
+    "github": "https://github.com/username/nn-compression",
+    "demo": null,
+    "featured": true
+  },
+  {
+    "title": "Distributed IoT Sensor Platform",
+    "description": "Built a scalable IoT pipeline for real-time environmental monitoring across 50+ sensor nodes. Includes edge preprocessing, MQTT messaging, and a live dashboard.",
+    "technologies": ["C", "MQTT", "InfluxDB", "Grafana", "Raspberry Pi"],
+    "github": "https://github.com/username/iot-platform",
+    "demo": "https://dashboard.demo.link",
+    "featured": false
+  },
+  {
+    "title": "Compiler for Subset Language",
+    "description": "Designed and implemented a full compiler pipeline (lexer → parser → semantic analysis → code generation) for a statically-typed subset language targeting LLVM IR.",
+    "technologies": ["C++", "LLVM", "Flex", "Bison"],
+    "github": "https://github.com/username/mini-compiler",
+    "demo": null,
+    "featured": false
+  },
+  {
+    "title": "Protein Structure Predictor",
+    "description": "Applied graph neural networks to predict secondary protein structures from amino acid sequences, achieving 82% accuracy on the CB513 benchmark dataset.",
+    "technologies": ["Python", "PyTorch Geometric", "BioPython", "NumPy"],
+    "github": "https://github.com/username/protein-gnn",
+    "demo": null,
+    "featured": true
+  },
+  {
+    "title": "Formal Verification Framework",
+    "description": "Built a lightweight model checker using BDD-based symbolic execution to verify safety properties of concurrent systems described in a custom specification language.",
+    "technologies": ["Haskell", "Z3", "Python", "SMT-LIB"],
+    "github": "https://github.com/username/model-checker",
+    "demo": null,
+    "featured": false
+  }
+]
