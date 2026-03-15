@@ -62,30 +62,62 @@
 
 
   <!-- ============================================================
-       HERO
+       HERO  (split: text left · photo right)
   ============================================================ -->
   <section class="hero" id="hero">
     <!-- Decorative background blobs -->
     <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
     <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
 
-    <div class="hero__content">
-      <p class="hero__eyebrow reveal">Graduate Researcher · Systems & ML</p>
-      <h1 class="hero__name reveal">Alex Chen</h1>
-      <p class="hero__tagline reveal">
-        Building systems that <em>think</em>, robots that <em>explore</em>,<br />
-        and tools that <em>matter</em>.
-      </p>
-      <p class="hero__intro reveal">
-        CS PhD student at Stanford, advised by Prof. Jane Smith. My work sits at the intersection
-        of robotics, machine learning, and formal methods — with a focus on making autonomous
-        systems reliable in the real world.
-      </p>
-      <div class="hero__cta reveal">
-        <a href="#projects" class="btn btn--primary">View Projects</a>
-        <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
+    <div class="hero__split container">
+
+      <!-- Left: text content -->
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Graduate Researcher · Systems &amp; ML</p>
+        <h1 class="hero__name reveal">Alex Chen</h1>
+        <p class="hero__tagline reveal">
+          Building systems that <em>think</em>, robots that <em>explore</em>,<br />
+          and tools that <em>matter</em>.
+        </p>
+        <p class="hero__intro reveal">
+          CS PhD student at Stanford, advised by Prof. Jane Smith. My work sits at the intersection
+          of robotics, machine learning, and formal methods — with a focus on making autonomous
+          systems reliable in the real world.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
+        </div>
       </div>
-    </div>
+
+      <!-- Right: profile photo -->
+      <div class="hero__photo-wrap reveal">
+        <div class="hero__photo-ring" aria-hidden="true"></div>
+        <div class="hero__photo-ring hero__photo-ring--2" aria-hidden="true"></div>
+        <div class="hero__photo">
+          <!--
+            ┌─────────────────────────────────────────────────────┐
+            │  SWAP PHOTO: replace the src below with your image  │
+            │  Recommended: square crop, min 600×600 px           │
+            │  e.g. src="./assets/photo.jpg"                      │
+            └─────────────────────────────────────────────────────┘
+          -->
+          <img
+            src="https://placehold.co/520x520/e8e3dc/8a837a?text=Your+Photo"
+            alt="Photo of Alex Chen"
+            id="heroPhoto"
+            width="520" height="520"
+            loading="eager"
+          />
+          <!-- Status badge -->
+          <div class="hero__status" aria-label="Currently open to collaborations">
+            <span class="hero__status-dot" aria-hidden="true"></span>
+            Open to collaborations
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.hero__split -->
 
     <!-- Scroll cue -->
     <div class="hero__scroll" aria-hidden="true">
@@ -96,7 +128,7 @@
 
 
   <!-- ============================================================
-       ABOUT
+       ABOUT  (photo left · bio + video right)
   ============================================================ -->
   <section class="section" id="about">
     <div class="container">
@@ -106,58 +138,131 @@
       </div>
 
       <div class="about__grid">
-        <div class="about__text reveal">
-          <p>
-            I'm a second-year PhD student in Computer Science at Stanford University. Before this,
-            I completed my B.Tech in Electronics &amp; Computer Engineering from IIT Bombay,
-            graduating with a Gold Medal.
-          </p>
-          <p>
-            I love working on hard problems where theory meets hardware — designing algorithms,
-            then watching them run on real robots or embedded systems. When I'm not in the lab,
-            you'll find me hiking, reading philosophy of mind, or cooking elaborate meals.
-          </p>
-          <div class="about__links">
-            <a href="./assets/cv.pdf" class="text-link" target="_blank" rel="noopener">
-              <i class="ph ph-file-text"></i> Download CV
-            </a>
-            <a href="https://scholar.google.com" class="text-link" target="_blank" rel="noopener">
-              <i class="ph ph-graduation-cap"></i> Google Scholar
-            </a>
+
+        <!-- Column 1: photo + quick facts -->
+        <div class="about__photo-col reveal">
+          <div class="about__photo-frame">
+            <!--
+              ┌──────────────────────────────────────────────────────┐
+              │  SWAP PHOTO: replace src with your image             │
+              │  e.g. src="./assets/photo.jpg"                       │
+              └──────────────────────────────────────────────────────┘
+            -->
+            <img
+              src="https://placehold.co/480x560/e8e3dc/8a837a?text=Your+Photo"
+              alt="Photo of Alex Chen"
+              class="about__photo-img"
+              width="480" height="560"
+              loading="lazy"
+            />
+            <!-- Floating accent card -->
+            <div class="about__photo-badge">
+              <i class="ph ph-star"></i>
+              <span>Stanford PhD · 2023–present</span>
+            </div>
           </div>
         </div>
 
-        <div class="about__cards reveal">
-          <div class="info-card">
-            <i class="ph ph-building-columns info-card__icon"></i>
-            <div>
-              <strong>Stanford University</strong>
-              <span>PhD, Computer Science · 2023–present</span>
+        <!-- Column 2: bio, video intro, info cards -->
+        <div class="about__right">
+          <div class="about__text reveal">
+            <p>
+              I'm a second-year PhD student in Computer Science at Stanford University. Before this,
+              I completed my B.Tech in Electronics &amp; Computer Engineering from IIT Bombay,
+              graduating with a Gold Medal.
+            </p>
+            <p>
+              I love working on hard problems where theory meets hardware — designing algorithms,
+              then watching them run on real robots or embedded systems. When I'm not in the lab,
+              you'll find me hiking, reading philosophy of mind, or cooking elaborate meals.
+            </p>
+            <div class="about__links">
+              <a href="./assets/cv.pdf" class="text-link" target="_blank" rel="noopener">
+                <i class="ph ph-file-text"></i> Download CV
+              </a>
+              <a href="https://scholar.google.com" class="text-link" target="_blank" rel="noopener">
+                <i class="ph ph-graduation-cap"></i> Google Scholar
+              </a>
             </div>
           </div>
-          <div class="info-card">
-            <i class="ph ph-graduation-cap info-card__icon"></i>
-            <div>
-              <strong>IIT Bombay</strong>
-              <span>B.Tech, EC Engineering · 2019–2023 · Gold Medal</span>
+
+          <!-- ── VIDEO INTRO CARD ─────────────────────────────── -->
+          <div class="video-card reveal" id="videoCard">
+            <div class="video-card__thumb" id="videoThumb" role="button" tabindex="0"
+                 aria-label="Play intro video"
+                 data-video-id="dQw4w9WgXcQ"
+                 data-video-platform="youtube">
+              <!--
+                ┌────────────────────────────────────────────────────┐
+                │  HOW TO SET YOUR VIDEO                             │
+                │  1. Find your YouTube or Vimeo video               │
+                │  2. YouTube: set data-video-id="YOUR_VIDEO_ID"     │
+                │     e.g. for https://youtu.be/abc123 → "abc123"    │
+                │  3. Vimeo:   set data-video-platform="vimeo"       │
+                │              set data-video-id="YOUR_VIDEO_ID"     │
+                │  4. Optionally replace the thumbnail below with    │
+                │     your own image: src="./assets/video-thumb.jpg" │
+                └────────────────────────────────────────────────────┘
+              -->
+              <img
+                src="https://placehold.co/680x383/1a1814/8a837a?text=▶+Watch+My+Intro+Video"
+                alt="Intro video thumbnail"
+                class="video-card__img"
+                id="videoThumbImg"
+                width="680" height="383"
+                loading="lazy"
+              />
+              <!-- Play button overlay -->
+              <div class="video-card__play" aria-hidden="true">
+                <div class="video-card__play-btn">
+                  <i class="ph ph-play-fill"></i>
+                </div>
+                <span class="video-card__play-label">Watch intro</span>
+              </div>
+            </div>
+
+            <!-- Expanded iframe (hidden until user clicks) -->
+            <div class="video-card__embed" id="videoEmbed" aria-hidden="true"></div>
+
+            <p class="video-card__caption">
+              <i class="ph ph-film-strip"></i>
+              2 min · Who I am, what I research, and what I'm looking for
+            </p>
+          </div><!-- /.video-card -->
+
+          <div class="about__cards reveal">
+            <div class="info-card">
+              <i class="ph ph-building-columns info-card__icon"></i>
+              <div>
+                <strong>Stanford University</strong>
+                <span>PhD, Computer Science · 2023–present</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="ph ph-graduation-cap info-card__icon"></i>
+              <div>
+                <strong>IIT Bombay</strong>
+                <span>B.Tech, EC Engineering · 2019–2023 · Gold Medal</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="ph ph-flask info-card__icon"></i>
+              <div>
+                <strong>Research Interests</strong>
+                <span>Robotics · ML Systems · Formal Verification · Edge AI</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="ph ph-map-pin info-card__icon"></i>
+              <div>
+                <strong>Location</strong>
+                <span>Stanford, CA — open to remote collaboration</span>
+              </div>
             </div>
           </div>
-          <div class="info-card">
-            <i class="ph ph-flask info-card__icon"></i>
-            <div>
-              <strong>Research Interests</strong>
-              <span>Robotics · ML Systems · Formal Verification · Edge AI</span>
-            </div>
-          </div>
-          <div class="info-card">
-            <i class="ph ph-map-pin info-card__icon"></i>
-            <div>
-              <strong>Location</strong>
-              <span>Stanford, CA — open to remote collaboration</span>
-            </div>
-          </div>
-        </div>
-      </div>
+        </div><!-- /.about__right -->
+
+      </div><!-- /.about__grid -->
     </div>
   </section>
 
@@ -341,7 +446,7 @@
 
 
   <!-- ============================================================
-       CONTACT
+       CONTACT  (photo + availability card · links)
   ============================================================ -->
   <section class="section" id="contact">
     <div class="container">
@@ -350,43 +455,86 @@
         <h2 class="section__title">Let's connect</h2>
       </div>
 
-      <div class="contact__layout reveal">
-        <p class="contact__body">
-          I'm always open to research conversations, collaborations, internship offers,
-          or just a good discussion. Drop me a line — I reply within a few days.
-        </p>
+      <div class="contact__grid">
 
-        <div class="contact__links">
-          <a href="mailto:alex@cs.stanford.edu" class="contact__item">
-            <span class="contact__icon"><i class="ph ph-envelope-simple"></i></span>
-            <div>
-              <strong>Email</strong>
-              <span>alex@cs.stanford.edu</span>
+        <!-- Left: human presence card -->
+        <div class="contact__presence reveal">
+          <div class="contact__photo-wrap">
+            <!--
+              ┌────────────────────────────────────────────────────┐
+              │  SWAP PHOTO: replace src with your image           │
+              │  e.g. src="./assets/photo.jpg"                     │
+              └────────────────────────────────────────────────────┘
+            -->
+            <img
+              src="https://placehold.co/320x320/e8e3dc/8a837a?text=Your+Photo"
+              alt="Photo of Alex Chen"
+              class="contact__photo"
+              width="320" height="320"
+              loading="lazy"
+            />
+            <div class="contact__availability">
+              <span class="contact__avail-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Available for</strong>
+                <ul>
+                  <li><i class="ph ph-check-circle"></i> Research collaborations</li>
+                  <li><i class="ph ph-check-circle"></i> PhD / internship opportunities</li>
+                  <li><i class="ph ph-check-circle"></i> Speaking &amp; guest lectures</li>
+                  <li><i class="ph ph-check-circle"></i> Open-source contributions</li>
+                </ul>
+              </div>
             </div>
-          </a>
-          <a href="https://github.com/username" class="contact__item" target="_blank" rel="noopener">
-            <span class="contact__icon"><i class="ph ph-github-logo"></i></span>
-            <div>
-              <strong>GitHub</strong>
-              <span>github.com/username</span>
-            </div>
-          </a>
-          <a href="https://linkedin.com/in/username" class="contact__item" target="_blank" rel="noopener">
-            <span class="contact__icon"><i class="ph ph-linkedin-logo"></i></span>
-            <div>
-              <strong>LinkedIn</strong>
-              <span>linkedin.com/in/username</span>
-            </div>
-          </a>
-          <a href="https://twitter.com/username" class="contact__item" target="_blank" rel="noopener">
-            <span class="contact__icon"><i class="ph ph-twitter-logo"></i></span>
-            <div>
-              <strong>Twitter / X</strong>
-              <span>@username</span>
-            </div>
-          </a>
+          </div>
+          <p class="contact__quote">
+            "I reply to every thoughtful message — usually within 48 hours."
+          </p>
         </div>
-      </div>
+
+        <!-- Right: links -->
+        <div class="contact__right reveal">
+          <p class="contact__body">
+            I'm always open to research conversations, collaborations, internship offers,
+            or just a good discussion. Drop me a line and let's build something meaningful together.
+          </p>
+
+          <div class="contact__links">
+            <a href="mailto:alex@cs.stanford.edu" class="contact__item">
+              <span class="contact__icon"><i class="ph ph-envelope-simple"></i></span>
+              <div>
+                <strong>Email</strong>
+                <span>alex@cs.stanford.edu</span>
+              </div>
+              <i class="ph ph-arrow-right contact__item-arrow"></i>
+            </a>
+            <a href="https://github.com/username" class="contact__item" target="_blank" rel="noopener">
+              <span class="contact__icon"><i class="ph ph-github-logo"></i></span>
+              <div>
+                <strong>GitHub</strong>
+                <span>github.com/username</span>
+              </div>
+              <i class="ph ph-arrow-right contact__item-arrow"></i>
+            </a>
+            <a href="https://linkedin.com/in/username" class="contact__item" target="_blank" rel="noopener">
+              <span class="contact__icon"><i class="ph ph-linkedin-logo"></i></span>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/username</span>
+              </div>
+              <i class="ph ph-arrow-right contact__item-arrow"></i>
+            </a>
+            <a href="https://twitter.com/username" class="contact__item" target="_blank" rel="noopener">
+              <span class="contact__icon"><i class="ph ph-twitter-logo"></i></span>
+              <div>
+                <strong>Twitter / X</strong>
+                <span>@username</span>
+              </div>
+              <i class="ph ph-arrow-right contact__item-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /.contact__grid -->
     </div>
   </section>
 

@@ -215,7 +215,56 @@ function escHtml(str) {
 
 
 /* ─────────────────────────────────────────────────────────────────
-   7. FOOTER YEAR — auto-update copyright year
+   7. VIDEO INTRO PLAYER
+   Clicking the thumbnail swaps it for an embedded iframe
+   Supports YouTube and Vimeo
+───────────────────────────────────────────────────────────────── */
+(function initVideoPlayer() {
+  const thumb   = document.getElementById('videoThumb');
+  const embed   = document.getElementById('videoEmbed');
+  if (!thumb || !embed) return;
+
+  thumb.addEventListener('click', playVideo);
+  // Allow keyboard activation
+  thumb.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playVideo(); }
+  });
+
+  function playVideo() {
+    const videoId   = thumb.dataset.videoId;
+    const platform  = thumb.dataset.videoPlatform || 'youtube';
+
+    if (!videoId) {
+      console.warn('Set data-video-id on #videoThumb to enable the player.');
+      return;
+    }
+
+    let src = '';
+    if (platform === 'youtube') {
+      src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    } else if (platform === 'vimeo') {
+      src = `https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&byline=0&portrait=0`;
+    }
+
+    const iframe = document.createElement('iframe');
+    iframe.src             = src;
+    iframe.allow           = 'autoplay; fullscreen; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.title           = 'Intro video';
+
+    embed.innerHTML = '';
+    embed.appendChild(iframe);
+
+    // Show embed, hide thumbnail
+    embed.classList.add('active');
+    embed.setAttribute('aria-hidden', 'false');
+    thumb.style.display = 'none';
+  }
+})();
+
+
+/* ─────────────────────────────────────────────────────────────────
+   8. FOOTER YEAR — auto-update copyright year
 ───────────────────────────────────────────────────────────────── */
 (function initFooterYear() {
   const el = document.getElementById('footerYear');
@@ -224,7 +273,7 @@ function escHtml(str) {
 
 
 /* ─────────────────────────────────────────────────────────────────
-   8. HERO REVEAL — stagger on page load
+   9. HERO REVEAL — stagger on page load
 ───────────────────────────────────────────────────────────────── */
 (function initHeroReveal() {
   // The hero .reveal elements animate via CSS opacity/transform.
